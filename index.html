@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses App</title>
+    <script src="https://kit.fontawesome.com/a27a0b0318.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">Учет расходов</h2>
+        <div class="editor">
+            <input type="number" class="editor__expense" min="0">
+            <select name="Категории" class="editor__select">
+               <option class="editor__select-item" hidden disabled selected>Категории</option>
+               <option class="editor__select-item">Еда</option>
+               <option class="editor__select-item">Развлечения</option>
+               <option class="editor__select-item">Транспорт</option>
+            </select>
+            <button class="editor__add">Добавить</button>
+        </div>
+        <div class="data">
+            <div class="data__cash">
+                <div class="data__cash-limit">
+                    Лимит: <span class="data__cash-limit_quantity">0 руб.</span>
+                    <i class="fa-regular fa-pen-to-square data__cash-limit_edit"></i>
+                </div>
+                <div class="data__cash-total">Всего трат: 
+                    <span class="data__cash-total_quantity">0 руб.</span>
+                    <span class="data__cash-total_diff"></span>
+                </div>
+                <div class="data__cash-status">Статус: <span class="data__cash-status_text data__cash-status_green">Все хорошо</span></div>
+            </div>
+            <div class="data__history">
+                <h3 class="data__history-title">История</h3>
+                <ol class="data__list">
+
+                </ol>
+            </div>
+        </div>
+        <button class="button-reset">Сбросить расходы</button>
+    </div>
+    <script type="module" src="scripts/index.js"></script>
+</body>
+</html>
